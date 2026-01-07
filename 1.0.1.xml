@@ -1,11 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application>
-  <!-- Light mode only configuration -->
-  <theme>
-    <light>
-      <background>#FFFFFF</background>
-      <text>#000000</text>
-      <accent>#007AFF</accent>
-    </light>
-  </theme>
-</application>
+<blog xmlns='http://www.blogger.com/atom/ns#'>
+  <title>BuzzSpot</title>
+  <description>Original BuzzSpot Blogger Template</description>
+  
+  <!-- Variable Groups -->
+  <variable-group description="Colors" selector="body">
+    <variable name="text.color" description="Text Color" type="color" default="#333333"/>
+    <variable name="background.color" description="Background Color" type="color" default="#ffffff"/>
+    <variable name="link.color" description="Link Color" type="color" default="#0066cc"/>
+    <variable name="accent.color" description="Accent Color" type="color" default="#ff6600"/>
+  </variable-group>
+
+  <variable-group description="Typography" selector="body">
+    <variable name="font.family" description="Font Family" type="font" default="'Trebuchet MS', Arial, sans-serif"/>
+    <variable name="font.size" description="Font Size" type="length" default="14px"/>
+  </variable-group>
+
+  <!-- Main CSS -->
+  <style>
+    body {
+      color: $text.color;
+      background-color: $background.color;
+      font-family: $font.family;
+      font-size: $font.size;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: $link.color;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .header {
+      background-color: $accent.color;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .post {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #cccccc;
+    }
+
+    .post h2 {
+      color: $accent.color;
+      margin-top: 0;
+    }
+
+    .post-meta {
+      color: #666666;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      background-color: #f5f5f5;
+      color: #666666;
+      padding: 20px;
+      text-align: center;
+      font-size: 12px;
+      margin-top: 30px;
+    }
+
+    .sidebar {
+      float: right;
+      width: 25%;
+    }
+
+    .main {
+      float: left;
+      width: 70%;
+    }
+
+    .widget {
+      background-color: #f9f9f9;
+      border: 1px solid #dddddd;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    .widget h3 {
+      color: $accent.color;
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    .clear {
+      clear: both;
+    }
+  </style>
+</blog>
