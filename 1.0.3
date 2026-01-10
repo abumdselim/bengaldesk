@@ -22,7 +22,7 @@
         <b:skin version='1.3.0'><![CDATA[
        
 -----------------------------------------------
-বেঙ্গল ডেস্ক
+বেঙ্গল ডেস্ক ১.০.৩
 -----------------------------------------------*/
 
 /*-- Customize Options (Cleaned & Updated) --*/
@@ -2004,6 +2004,156 @@ h1.entry-title, .post-body h1 {
         padding-top: 10px !important;
     }
 }
+
+
+/* --- SENIOR DEV FIX: Desktop Header Cleanup --- */
+/* এই কোড শুধুমাত্র ৯৮১ পিক্সেলের উপরের স্ক্রিনে (ডেস্কটপ/ল্যাপটপ) কাজ করবে */
+@media only screen and (min-width: 981px) {
+
+    /* ১. ডেস্কটপ হেডারের উপরের অনাকাঙ্খিত স্পেস রিমুভ */
+    body {
+        padding-top: 0 !important; /* আগের 70px প্যাডিং ওভাররাইড করে 0 করা হলো */
+    }
+    
+    #outer-wrapper {
+        margin-top: 0 !important;
+    }
+
+    /* ২. ডেস্কটপে হ্যামবার্গার মেনু হাইড করা */
+    .mobile-menu-toggle {
+        display: none !important; /* এটি ডেস্কটপে মেনু আইকন জোর করে বন্ধ রাখবে */
+    }
+
+    /* ৩. সার্চ বাটন এবং ল্যাঙ্গুয়েজ সুইচার যাতে ঠিকঠাক থাকে */
+    .toggle-wrap {
+        display: flex !important;
+        align-items: center !important;
+    }
+}
+
+/* --- MODERN FULL SCREEN OVERLAY SEARCH (By Senior Dev) --- */
+
+/* ১. সার্চ র‍্যাপার (পুরো স্ক্রিন জুড়বে) */
+#main-search-wrap {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important; /* পুরো হাইট */
+    background-color: rgba(5, 41, 98, 0.98) !important; /* আপনার ব্র্যান্ড কালার (ডিপ ব্লু) */
+    z-index: 999999 !important; /* সবার উপরে থাকবে */
+    padding: 0 !important;
+    display: none; /* ডিফল্টভাবে লুকানো */
+    
+    /* কন্টেন্ট মাঝখানে আনার জন্য */
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px); /* ব্যাকগ্রাউন্ড হালকা ঝাপসা হবে */
+}
+
+/* যখন সার্চ বাটন ক্লিক করা হবে (JS ক্লাস 'search-active' যোগ করে) */
+body.search-active #main-search-wrap {
+    display: flex !important; /* JS এর 'block' কে ওভাররাইড করে 'flex' করা হলো */
+}
+
+/* ২. সার্চ ফর্ম কন্টেইনার */
+.main-search {
+    width: 80% !important;
+    max-width: 800px !important;
+    float: none !important;
+    margin: 0 auto !important;
+    height: auto !important;
+    animation: searchUp 0.4s ease forwards !important; /* এনিমেশন */
+}
+
+/* ৩. ইনপুট ফিল্ড ডিজাইন */
+.main-search .search-form {
+    border-bottom: 2px solid rgba(255,255,255,0.3) !important;
+    height: auto !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+.main-search .search-input {
+    background: transparent !important;
+    color: #ffffff !important;
+    font-family: 'Noto Serif Bengali', serif !important;
+    font-size: 32px !important; /* বড় ফন্ট */
+    font-weight: 700 !important;
+    text-align: center !important;
+    height: 80px !important;
+    padding: 0 !important;
+    width: 100% !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.main-search .search-input::placeholder {
+    color: rgba(255,255,255,0.5) !important;
+    font-weight: 400 !important;
+    font-size: 28px !important;
+}
+
+/* ৪. ক্লোজ বাটন (X) ডিজাইন - ডান দিকের কোণায় */
+.main-search .search-close {
+    position: absolute !important;
+    top: 40px !important;
+    right: 40px !important;
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 0 !important; /* ডিফল্ট আইকন টেক্সট হাইড */
+    background: transparent !important;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* নতুন ক্লোজ আইকন (Material Icon) */
+.main-search .search-close::before {
+    content: '\e5cd' !important; /* Close icon code */
+    font-family: 'Material Icons Round' !important;
+    font-size: 45px !important;
+    color: #fff !important;
+    display: block !important;
+    line-height: 50px !important;
+}
+
+.main-search .search-close:hover {
+    transform: rotate(90deg); /* হোভার করলে ঘুরবে */
+    opacity: 1;
+}
+
+/* ৫. মোবাইল অপ্টিমাইজেশন */
+@media only screen and (max-width: 768px) {
+    .main-search .search-input {
+        font-size: 24px !important; /* মোবাইলে ফন্ট একটু ছোট */
+        height: 60px !important;
+    }
+    .main-search .search-input::placeholder {
+        font-size: 20px !important;
+    }
+    .main-search .search-close {
+        top: 20px !important;
+        right: 20px !important;
+    }
+    .main-search .search-close::before {
+        font-size: 35px !important;
+    }
+}
+
+/* ৬. এন্ট্রান্স অ্যানিমেশন */
+@keyframes searchUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px) scale(0.95); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1); 
+    }
+}
+
+
+
 ]]></b:skin>
 </b:if>
 <b:if cond='data:view.isLayoutMode'>
