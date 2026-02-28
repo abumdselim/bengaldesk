@@ -3,32 +3,20 @@
 <html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.3.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' expr:lang='data:blog.localeUnderscoreDelimited' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <b:include name='dark-mode'/>
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async='async' src='https://www.googletagmanager.com/gtag/js?id=G-H3TJJ96NTT'/>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag(&#39;js&#39;, new Date());
-
-  gtag(&#39;config&#39;, &#39;G-H3TJJ96NTT&#39;);
-</script>
-    <link href='https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Noto+Serif+Bengali:wght@300;400;500;600;700&amp;display=swap' rel='stylesheet'/>
-    
-    <link href='https://fonts.googleapis.com/css2?family=Material+Icons+Round&amp;display=swap' rel='stylesheet'/>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' rel='stylesheet'/>
-
-    <b:include name='theme-head'/>
-    <b:if cond='!data:view.isLayoutMode'>
-        <b:skin version='1.3.0'><![CDATA[
-       
+ <link href='https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700&amp;display=swap' rel='stylesheet'/>
+<b:include name='theme-head'/>
+<b:if cond='!data:view.isLayoutMode'>
+<b:skin version='1.3.0'><![CDATA[/*
 -----------------------------------------------
-Bengaldesk 1.0.4
+Blogger Template Style
+Name:         BuzzSpot
+Version:      1.3.0 - Premium
+Author:       Pro Blogger Templates
+Author Url:   https://probloggertemplates.com/
 -----------------------------------------------*/
 
-/*-- Customize Options (Cleaned & Updated) --*/
-
-<Variable name="keycolor" description="Main Color" type="color" default="#052962" value="#052962"/>
-
+/*-- Customize Options (Start) --
+<Variable name="keycolor" description="Main Color" type="color" default="#f12f3f" value="#f12f3f"/>
 <Group description="Theme Options" selector="body">
     <Variable name="darkmode" description="Native Dark Mode" type="length" default="0px" min="0px" max="1px" value="0px"/>
     <Variable name="userdarkmode" description="User Dark Mode" type="length" default="1px" min="0px" max="1px" value="1px"/>
@@ -37,42 +25,36 @@ Bengaldesk 1.0.4
     <Variable name="fixedmenu" description="Fixed Menu" type="length" default="1px" min="0px" max="1px" value="1px"/>
     <Variable name="fixedsidebar" description="Fixed Sidebar" type="length" default="1px" min="0px" max="1px" value="1px"/>
 </Group>
-
 <Group description="Widths" selector="body">
     <Variable name="row.width" description="Container Width" type="length" default="1073px" min="970px" max="1094px" value="1073px"/>
     <Variable name="sidebar.width" description="Sidebar Width" type="length" default="320px" min="250px" max="336px" value="320px"/>
 </Group>
-
 <Group description="Fonts" selector="body">
-    <Variable name="main.font" description="Main Font" type="font" family="Noto Serif Bengali" default="normal 400 14px 'Noto Serif Bengali', serif" value="normal 400 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="menu.font" description="Menu Font" type="font" family="Noto Serif Bengali" default="normal 400 14px 'Noto Serif Bengali', serif" value="normal 400 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="title.font" description="Title Font" type="font" family="Noto Serif Bengali" default="normal 400 14px 'Noto Serif Bengali', serif" value="normal 400 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="text.font" description="Text Font" type="font" family="Noto Serif Bengali" default="normal 400 14px 'Noto Serif Bengali', serif" value="normal 400 14px &#39;Noto Serif Bengali&#39;, serif"/>
+    <Variable name="main.font" description="Main Font" type="font" family="Montserrat" default="normal 400 14px $(family)" value="normal 400 14px $(family)"/>
+    <Variable name="menu.font" description="Menu Font" type="font" family="Montserrat" default="normal 400 14px $(family)" value="normal 400 14px $(family)"/>
+    <Variable name="title.font" description="Title Font" type="font" family="Montserrat" default="normal 400 14px $(family)" value="normal 400 14px $(family)"/>
+    <Variable name="text.font" description="Text Font" type="font" family="Montserrat" default="normal 400 14px $(family)" value="normal 400 14px $(family)"/>
 </Group>
-
 <Group description="Background" selector="body">
-    <Variable name="background.color" description="Body Background (Boxed)" type="color" default="#e5e6e7"  value="#e5e6e7"/>
+	<Variable name="background.color" description="Body Background (Boxed)" type="color" default="#e5e6e7"  value="#e5e6e7"/>
     <Variable name="outer.bg" description="Outer Background" type="color" default="#f4f4f4"  value="#f4f4f4"/>
-    <Variable name="widget.bg" description="Widget Background" type="color" default="#ffffff" value="#ffffff"/>
+	<Variable name="widget.bg" description="Widget Background" type="color" default="#ffffff" value="#ffffff"/>
     <Variable name="border.color" description="Border Color" type="color" default="#f5f5f5"  value="#f5f5f5"/>
 </Group>
-
 <Group description="Colors" selector="body">
-    <Variable name="main.color" description="Main Color" type="color" default="#052962" value="#052962"/>
+    <Variable name="main.color" description="Main Color" type="color" default="#f12f3f" value="#f12f3f"/>
     <Variable name="title.color" description="Title Color" type="color" default="#222222" value="#222222"/>
-    <Variable name="title.hover.color" description="Title Hover Color" type="color" default="$(main.color)" value="#052962"/>
+    <Variable name="title.hover.color" description="Title Hover Color" type="color" default="$(main.color)" value="#f12f3f"/>
     <Variable name="text.color" description="Text Color" type="color" default="#626262"  value="#626262"/>
     <Variable name="meta.color" description="Meta Color" type="color" default="#97979d" value="#97979d"/>
-    <Variable name="meta.link" description="Meta Link Color" type="color" default="$(main.color)" value="#052962"/>
+    <Variable name="meta.link" description="Meta Link Color" type="color" default="$(main.color)" value="#f12f3f"/>
 </Group>
-
 <Group description="Top Ads" selector="#top-ads-wrap">
     <Variable name="topad.onpost" description="Show on Post Page" type="length" default="1px" min="0px" max="1px" value="1px"/>
-    <Variable name="topad.bg" description="Background" type="color" default="$(outer.bg)" value="#f4f4f4"/>
+	<Variable name="topad.bg" description="Background" type="color" default="$(outer.bg)" value="#f4f4f4"/>
     <Variable name="topad.border" description="Show Border" type="length" default="0px" min="0px" max="1px" value="0px"/>
-    <Variable name="topad.border.color" description="Border Color" type="color" default="$(border.color)" value="#f5f5f5"/>
+	<Variable name="topad.border.color" description="Border Color" type="color" default="$(border.color)" value="#f5f5f5"/>
 </Group>
-
 <Group description="Header" selector="#header-wrapper">
     <Variable name="header.height" description="Height" type="length" default="62px" min="50px" max="70px" value="62px"/>
     <Variable name="header.left" description="Background (Left)" type="color" default="#ffffff" value="#052962"/>
@@ -81,31 +63,36 @@ Bengaldesk 1.0.4
     <Variable name="header.color" description="Color" type="color" default="$(title.color)" value="#ffffff"/>
     <Variable name="header.hover.color" description="Hover Color" type="color" default="$(main.color)" value="#f12f3f"/>
 </Group>
-
 <Group description="Sub Menu" selector="#header-wrapper">
     <Variable name="submenu.bg" description="Background" type="color" default="#ffffff" value="#ffffff"/>
     <Variable name="submenu.color" description="Color" type="color" default="$(title.color)" value="#222222"/>
-    <Variable name="submenu.hover.color" description="Hover Color" type="color" default="$(main.color)" value="#052962"/>
+    <Variable name="submenu.hover.color" description="Hover Color" type="color" default="$(main.color)" value="#f12f3f"/>
 </Group>
-
 <Group description="Mega Menu" selector="#header-wrapper">
     <Variable name="mega.bg" description="Background" type="color" default="$(submenu.bg)" value="#ffffff"/>
     <Variable name="mega.color" description="Color" type="color" default="$(submenu.color)" value="#222222"/>
-    <Variable name="mega.hover.color" description="Hover Color" type="color" default="$(main.color)" value="#052962"/>
+    <Variable name="mega.hover.color" description="Hover Color" type="color" default="$(main.color)" value="#f12f3f"/>
     <Variable name="mega.meta.color" description="Meta Color" type="color" default="$(meta.color)" value="#97979d"/>
 </Group>
-
 <Group description="Mobile Menu" selector="body">
     <Variable name="mobilemenu.bg" description="Background" type="color" default="#ffffff" value="#ffffff"/>
     <Variable name="mobilemenu.color" description="Color" type="color" default="$(title.color)" value="#222222"/>
-    <Variable name="mobilemenu.hover.color" description="Hover Color" type="color" default="$(main.color)" value="#052962"/>
+    <Variable name="mobilemenu.hover.color" description="Hover Color" type="color" default="$(main.color)" value="#f12f3f"/>
 </Group>
-
+<Group description="Ticker" selector="#header-wrapper">
+    <Variable name="ticker.onpost" description="Show on Post Page" type="length" default="1px" min="0px" max="1px" value="1px"/>
+    <Variable name="ticker.bg" description="Background" type="color" default="#ffffff" value="#ffffff"/>
+    <Variable name="ticker.icon" description="Icon Color" type="color" default="$(main.color)" value="#f12f3f"/>
+    <Variable name="ticker.title" description="Headline Color" type="color" default="$(title.color)" value="#222222"/>
+    <Variable name="ticker.color" description="Title Color" type="color" default="$(text.color)" value="#626262"/>
+    <Variable name="ticker.hover.color" description="Hover Color" type="color" default="$(main.color)" value="#f12f3f"/>
+    <Variable name="ticker.border" description="Show Border" type="length" default="1px" min="0px" max="1px" value="1px"/>
+    <Variable name="ticker.border.color" description="Border Color" type="color" default="$(border.color)" value="#f5f5f5"/>
+</Group>
 <Group description="Blog Posts" selector="body">
     <Variable name="gridstyle" description="Grid Style" type="length" default="0px" min="0px" max="1px" value="0px"/>
     <Variable name="summary" description="Show Summary" type="length" default="1px" min="0px" max="1px" value="1px"/>
 </Group>
-
 <Group description="Thumb Tags" selector="body">
     <Variable name="thumbtag" description="Show Thumb Tag" type="length" default="1px" min="0px" max="1px" value="1px"/>
     <Variable name="thumbtag.left" description="Background (Left)" type="color" default="#f8491b" value="#f8491b"/>
@@ -113,93 +100,125 @@ Bengaldesk 1.0.4
     <Variable name="thumbtag.right" description="Background (Right)" type="color" default="#dc1860" value="#dc1860"/>
     <Variable name="thumbtag.color" description="Color" type="color" default="#ffffff" value="#ffffff"/>
 </Group>
-
 <Group description="Entry Tags" selector="body">
     <Variable name="entrytag" description="Show Entry Tag" type="length" default="1px" min="0px" max="1px" value="1px"/>
-    <Variable name="entrytag.color" description="Color" type="color" default="$(main.color)" value="#052962"/>
+    <Variable name="entrytag.color" description="Color" type="color" default="$(main.color)" value="#f12f3f"/>
 </Group>
-
 <Group description="Post Page" selector="body">
     <Variable name="breadcrumb" description="Breadcrumbs" type="length" default="1px" min="0px" max="1px" value="1px"/>
     <Variable name="itempost.title.size" description="Title Font Size" type="length" default="33px" min="20px" max="50px" value="33px"/>
     <Variable name="itempost.content.size" description="Text Font Size" type="length" default="15px" min="12px" max="20px" value="15px"/>
     <Variable name="postnav" description="Navigation" type="length" default="1px" min="0px" max="1px" value="1px"/>
 </Group>
-
 <Group description="Footer Ads" selector="#footer-ads-wrap">
     <Variable name="footerad.onpost" description="Show on Post Page" type="length" default="1px" min="0px" max="1px" value="1px"/>
-    <Variable name="footerad.bg" description="Background" type="color" default="$(widget.bg)" value="#ffffff"/>
+	<Variable name="footerad.bg" description="Background" type="color" default="$(widget.bg)" value="#ffffff"/>
     <Variable name="footerad.border" description="Show Border" type="length" default="0px" min="0px" max="1px" value="0px"/>
-    <Variable name="footerad.border.color" description="Border Color" type="color" default="$(border.color)" value="#f5f5f5"/>
+	<Variable name="footerad.border.color" description="Border Color" type="color" default="$(border.color)" value="#f5f5f5"/>
 </Group>
-
 <Group description="Footer" selector="#footer-wrapper">
     <Variable name="footer.bg" description="Background" type="color" default="#16161a" value="#052962"/>
     <Variable name="footer.color" description="Color" type="color" default="#ffffff" value="#ffffff"/>
     <Variable name="footer.text.color" description="Text Color" type="color" default="#AAAAAA" value="#ffffff"/>
 </Group>
-
 <Group description="Footer Bar" selector="div.footer-bar">
     <Variable name="footerbar.bg" description="Background" type="color" default="#09090a" value="#0b3d80"/>
     <Variable name="footerbar.color" description="Color" type="color" default="#ffffff" value="#ffffff"/>
-    <Variable name="footerbar.hover.color" description="Hover Color" type="color" default="$(main.color)" value="#052962"/>
+    <Variable name="footerbar.hover.color" description="Hover Color" type="color" default="$(main.color)" value="#f12f3f"/>
     <Variable name="footerbar.border" description="Show Border" type="length" default="0px" min="0px" max="1px" value="0px"/>
     <Variable name="footerbar.border.color" description="Border Color" type="color" default="#2b2b2f" value="#2b2b2f"/>
 </Group>
-
 <Group description="Cookie Consent" selector="#buzzspot-pro-cookie-consent">
     <Variable name="cookie.bg" description="Background" type="color" default="#ffffff" value="#ffffff"/>
     <Variable name="cookie.color" description="Text Color" type="color" default="$(text.color)" value="#626262"/>
 </Group>
-
 <Group description="Buttons" selector="body">
     <Variable name="btn.left" description="Background (Left)" type="color" default="#f8491b" value="#f8491b"/>
     <Variable name="btn.center" description="Background (Center)" type="color" default="#f12f3f" value="#f12f3f"/>
     <Variable name="btn.right" description="Background (Right)" type="color" default="#dc1860" value="#dc1860"/>
     <Variable name="btn.color" description="Color" type="color" default="#ffffff" value="#ffffff"/>
 </Group>
-
 <Group description="Dark Mode" selector="body">
     <Variable name="dark.bg" description="Body Background" type="color" default="#27272b" value="#27272b"/>
     <Variable name="dark1.bg" description="Background 1" type="color" default="#16161a" value="#16161a"/>
     <Variable name="dark2.bg" description="Background 2" type="color" default="#202024" value="#202024"/>
     <Variable name="dark3.bg" description="Background 3" type="color" default="#252529" value="#252529"/>
-    <Variable name="dark.main.color" description="Main Color" type="color" default="$(main.color)" value="#052962"/>
+    <Variable name="dark.main.color" description="Main Color" type="color" default="$(main.color)" value="#f12f3f"/>
     <Variable name="dark.title" description="Title Color" type="color" default="#f8f8fb" value="#f8f8fb"/>
     <Variable name="dark.text" description="Text Color" type="color" default="#c5c5c8" value="#c5c5c8"/>
     <Variable name="dark.meta" description="Meta Color" type="color" default="#aaaaaa" value="#aaaaaa"/>
-    <Variable name="dark.meta.link" description="Meta Link Color" type="color" default="$(dark.main.color)" value="#052962"/>
+    <Variable name="dark.meta.link" description="Meta Link Color" type="color" default="$(dark.main.color)" value="#f12f3f"/>
     <Variable name="dark.border" description="Border Color" type="color" default="#2b2b2f"  value="#2b2b2f"/>
 </Group>
-
 <Group description="Fix Blur (Fonts)" selector="body">
-    <Variable name="mainfont.italic" description="Main Font Italic" type="font" default="italic 400 14px 'Noto Serif Bengali', serif" value="italic 400 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="mainfont.medium" description="Main Font Medium" type="font" default="normal 500 14px 'Noto Serif Bengali', serif" value="normal 500 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="mainfont.medium.italic" description="Main Font Medium Italic" type="font" default="italic 500 14px 'Noto Serif Bengali', serif" value="italic 500 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="mainfont.semibold" description="Main Font Semi Bold" type="font" default="normal 600 14px 'Noto Serif Bengali', serif" value="normal 600 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="mainfont.semibold.italic" description="Main Font Semi Bold Italic" type="font" default="italic 600 14px 'Noto Serif Bengali', serif" value="italic 600 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="mainfont.bold" description="Main Font Bold" type="font" default="normal 700 14px 'Noto Serif Bengali', serif" value="normal 700 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="mainfont.bold.italic" description="Main Font Bold Italic" type="font" default="italic 700 14px 'Noto Serif Bengali', serif" value="italic 700 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    
-    <Variable name="menufont.bold" description="Menu Font Bold" type="font" default="normal 700 14px 'Noto Serif Bengali', serif" value="normal 700 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="titlefont.bold" description="Title Font Bold" type="font" default="normal 700 14px 'Noto Serif Bengali', serif" value="normal 700 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="titlefont.bold.italic" description="Title Font Bold Italic" type="font" default="italic 700 14px 'Noto Serif Bengali', serif" value="italic 700 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="textfont.italic" description="Text Font Italic" type="font" default="italic 400 14px 'Noto Serif Bengali', serif" value="italic 400 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="textfont.bold" description="Text Font Bold" type="font" default="normal 700 14px 'Noto Serif Bengali', serif" value="normal 700 14px &#39;Noto Serif Bengali&#39;, serif"/>
-    <Variable name="textfont.bold.italic" description="Text Font Bold Italic" type="font" default="italic 700 14px 'Noto Serif Bengali', serif" value="italic 700 14px &#39;Noto Serif Bengali&#39;, serif"/>
+    <!-- Site Font -->
+    <Variable name="mainfont.italic" description="Main Font Italic" type="font" default="italic 400 14px $(main.font.family)" value="italic 400 14px $(family)"/>
+    <Variable name="mainfont.medium" description="Main Font Medium" type="font" default="normal 500 14px $(main.font.family)" value="normal 500 14px $(family)"/>
+    <Variable name="mainfont.medium.italic" description="Main Font Medium Italic" type="font" default="italic 500 14px $(main.font.family)" value="italic 500 14px $(family)"/>
+    <Variable name="mainfont.semibold" description="Main Font Semi Bold" type="font" default="normal 600 14px $(main.font.family)" value="normal 600 14px $(family)"/>
+    <Variable name="mainfont.semibold.italic" description="Main Font Semi Bold Italic" type="font" default="italic 600 14px $(main.font.family)" value="italic 600 14px $(family)"/>
+    <Variable name="mainfont.bold" description="Main Font Bold" type="font" default="normal 700 14px $(main.font.family)" value="normal 700 14px $(family)"/>
+    <Variable name="mainfont.bold.italic" description="Main Font Bold Italic" type="font" default="italic 700 14px $(main.font.family)" value="italic 700 14px $(family)"/>
+    <!-- Menu Font -->
+    <Variable name="menufont.bold" description="Menu Font Bold" type="font" default="normal 700 14px $(menu.font.family)" value="normal 700 14px $(family)"/>
+    <!-- Title Font -->
+    <Variable name="titlefont.bold" description="Title Font Bold" type="font" default="normal 700 14px $(title.font.family)" value="normal 700 14px $(family)"/>
+    <Variable name="titlefont.bold.italic" description="Title Font Bold Italic" type="font" default="italic 700 14px $(title.font.family)" value="italic 700 14px $(family)"/>
+    <!-- Text Font -->
+    <Variable name="textfont.italic" description="Text Font Italic" type="font" default="italic 400 14px $(text.font.family)" value="italic 400 14px $(family)"/>
+    <Variable name="textfont.bold" description="Text Font Bold" type="font" default="normal 700 14px $(text.font.family)" value="normal 700 14px $(family)"/>
+    <Variable name="textfont.bold.italic" description="Text Font Bold Italic" type="font" default="italic 700 14px $(text.font.family)" value="italic 700 14px $(family)"/>
 </Group>
-
 <Variable name="body.background" description="Background" type="background" color="$(background.color)" default="$(color) none repeat fixed top left" value="$(color) none repeat fixed top left"/>
 <Variable name="body.background.color" description="Comments Background" hideEditor="true" type="color" default="transparent"  value="transparent"/>
 <Variable name="body.title.color" description="Comments Color" hideEditor="true" type="color" default="$(title.color)" value="#222222"/>
 <Variable name="body.text.color" description="Comments Text Color" hideEditor="true" type="color" default="$(text.color)"  value="#626262"/>
-<Variable name="body.link.color" description="Comments Link Color" hideEditor="true" type="color" default="$(main.color)"  value="#052962"/>
-<Variable name="body.text.font" description="Comments Font 1" hideEditor="true" type="font" default="normal 400 14px 'Noto Serif Bengali', serif !important"  value="normal 400 14px &#39;Noto Serif Bengali&#39;, serif !important"/>
-<Variable name="body.action.font.large" description="Comments Font 2" hideEditor="true" type="font" default="normal 700 14px 'Noto Serif Bengali', serif !important"  value="normal 700 14px &#39;Noto Serif Bengali&#39;, serif !important"/>
+<Variable name="body.link.color" description="Comments Link Color" hideEditor="true" type="color" default="$(main.color)"  value="#f12f3f"/>
+<Variable name="body.text.font" description="Comments Font 1" hideEditor="true" type="font" default="normal 400 14px montserrat, Arial, sans-serif !important"  value="normal 400 14px montserrat, Arial, sans-serif !important"/>
+<Variable name="body.action.font.large" description="Comments Font 2" hideEditor="true" type="font" default="normal 700 14px montserrat, Arial, sans-serif !important"  value="normal 700 14px montserrat, Arial, sans-serif !important"/>
+-- Customize Options (End) --*/
 
-/*-- Customize Options (End) --*/
-
-
+/*-- Google Fonts --*/
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUQjIg1_i6t8kCHKm459WxRxC7mw9c.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUQjIg1_i6t8kCHKm459WxRzS7mw9c.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUQjIg1_i6t8kCHKm459WxRxi7mw9c.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUQjIg1_i6t8kCHKm459WxRxy7mw9c.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUQjIg1_i6t8kCHKm459WxRyS7m.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZOg3z8fZwnCo.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZOg3z-PZwnCo.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZOg3z8_ZwnCo.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZOg3z8vZwnCo.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZOg3z_PZw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZFgrz8fZwnCo.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZFgrz-PZwnCo.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZFgrz8_ZwnCo.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZFgrz8vZwnCo.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZFgrz_PZw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZcgvz8fZwnCo.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZcgvz-PZwnCo.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZcgvz8_ZwnCo.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZcgvz8vZwnCo.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:italic;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUPjIg1_i6t8kCHKm459WxZcgvz_PZw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_ZpC3gTD_u50.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_ZpC3g3D_u50.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_ZpC3gbD_u50.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_ZpC3gfD_u50.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF3gTD_u50.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF3g3D_u50.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF3gbD_u50.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF3gfD_u50.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF3gnD_g.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_dJE3gTD_u50.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_dJE3g3D_u50.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_dJE3gbD_u50.woff2) format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_dJE3gfD_u50.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 
 /*-- Material Icons Font --*/
 @font-face{font-family:"Material Icons Round";font-display:swap;font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/materialiconsround/v65/LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmP.woff2) format("woff2")}.mir{font-family:"Material Icons Round";font-weight:400;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:liga;-webkit-font-smoothing:antialiased}@font-face{font-family:"PBT Icons";font-display:block;font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/materialiconsround/v65/LDItaoyNOAY6Uewc665JcIzCKsKc_M9flwmP.woff2) format("woff2")}
@@ -207,131 +226,120 @@ Bengaldesk 1.0.4
 /*-- Font Awesome 5 Brands 5.15.4 --*/
 @font-face{font-family:"Font Awesome 5 Brands";font-display:swap;font-style:normal;font-weight:400;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.eot);src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.woff) format("woff"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.ttf) format("truetype"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.svg#fontawesome) format("svg")}.fab{font-family:"Font Awesome 5 Brands";font-weight:400}
 
-
 /*-- CSS Variables --*/
-
-
 :root{
-    /* --- FONTS --- */
-    /* বডি ফন্ট: ইংরেজির জন্য Merriweather, বাংলার জন্য Noto Serif Bengali */
-    --body-font: 'Merriweather', 'Noto Serif Bengali', serif;
-    /* মেনু এবং টাইটেল ফন্ট: শুধুই Noto Serif Bengali */
+--body-font: 'Noto Serif Bengali', serif;
     --menu-font: 'Noto Serif Bengali', serif;
     --title-font: 'Noto Serif Bengali', serif;
     --text-font: 'Noto Serif Bengali', serif;
-
-    /* --- COLORS & BACKGROUNDS --- */
-    --body-bg-color:$(background.color);
-    --body-bg:$(body.background);
-    --outer-bg:$(outer.bg);
-    --main-color:$(main.color);
-    --title-color:$(title.color);
-    --title-hover-color:$(title.hover.color);
-    --text-color:$(text.color);
-    --meta-color:$(meta.color);
-    --meta-link-color:$(meta.link);
-
-    /* --- TAG COLORS --- */
-    --thumbtag-bg:linear-gradient(135deg,$(thumbtag.left) 0%,$(thumbtag.center) 50%,$(thumbtag.right) 100%);
-    --thumbtag-color:$(thumbtag.color);
-    --entrytag-color:$(entrytag.color);
-
-    /* --- ADS --- */
-    --topad-bg:$(topad.bg);
-    --topad-border:$(topad.border.color);
-
-    /* --- HEADER --- */
-    --header-bg:linear-gradient(135deg,$(header.left) 0%,$(header.center) 50%,$(header.right) 100%);
-    --header-color:$(header.color);
-    --header-hover-color:$(header.hover.color);
-
-    /* --- MENUS --- */
-    --submenu-bg:$(submenu.bg);
-    --submenu-color:$(submenu.color);
-    --submenu-hover-color:$(submenu.hover.color);
-    --mega-bg:$(mega.bg);
-    --mega-color:$(mega.color);
-    --mega-hover-color:$(mega.hover.color);
-    --mega-meta-color:$(mega.meta.color);
-    --mobilemenu-bg:$(mobilemenu.bg);
-    --mobilemenu-color:$(mobilemenu.color);
-    --mobilemenu-hover-color:$(mobilemenu.hover.color);
-
-    /* [TICKER REMOVED] - টিকার ভ্যারিয়েবল মুছে ফেলা হয়েছে */
-
-    /* --- WIDGETS & FOOTER --- */
-    --widget-bg:$(widget.bg);
-    --footerad-bg:$(footerad.bg);
-    --footerad-border:$(footerad.border.color);
-    --footer-bg:$(footer.bg);
-    --footer-color:$(footer.color);
-    --footer-text-color:$(footer.text.color);
-    --footerbar-bg:$(footerbar.bg);
-    --footerbar-color:$(footerbar.color);
-    --footerbar-hover-color:$(footerbar.hover.color);
-    --footerbar-border-color:$(footerbar.border.color);
-    --cookie-bg:$(cookie.bg);
-    --cookie-color:$(cookie.color);
-
-    /* --- BUTTONS & MISC --- */
-    --button-bg:linear-gradient(135deg,$(btn.left) 0%,$(btn.center) 50%,$(btn.right) 100%);
-    --button-color:$(btn.color);
-    --button-border:$(btn.center);
-    --light-weight:400;
-    --title-weight:700;
-    --gray-bg:rgba(155,155,155,0.05);
-    --border-color:$(border.color);
-    --radius:5px;
-    --widget-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    --avatar-shadow:0px 1px 4px rgba(0,0,0,0.05);
+--body-bg-color:$(background.color);
+--body-bg:$(body.background);
+--outer-bg:$(outer.bg);
+--main-color:$(main.color);
+--title-color:$(title.color);
+--title-hover-color:$(title.hover.color);
+--text-color:$(text.color);
+--meta-color:$(meta.color);
+--meta-link-color:$(meta.link);
+--thumbtag-bg:linear-gradient(135deg,$(thumbtag.left) 0%,$(thumbtag.center) 50%,$(thumbtag.right) 100%);
+--thumbtag-color:$(thumbtag.color);
+--entrytag-color:$(entrytag.color);
+--topad-bg:$(topad.bg);
+--topad-border:$(topad.border.color);
+--header-bg:linear-gradient(135deg,$(header.left) 0%,$(header.center) 50%,$(header.right) 100%);
+--header-color:$(header.color);
+--header-hover-color:$(header.hover.color);
+--submenu-bg:$(submenu.bg);
+--submenu-color:$(submenu.color);
+--submenu-hover-color:$(submenu.hover.color);
+--mega-bg:$(mega.bg);
+--mega-color:$(mega.color);
+--mega-hover-color:$(mega.hover.color);
+--mega-meta-color:$(mega.meta.color);
+--mobilemenu-bg:$(mobilemenu.bg);
+--mobilemenu-color:$(mobilemenu.color);
+--mobilemenu-hover-color:$(mobilemenu.hover.color);
+--ticker-bg:$(ticker.bg);
+--ticker-icon:$(ticker.icon);
+--ticker-title:$(ticker.title);
+--ticker-color:$(ticker.color);
+--ticker-hover-color:$(ticker.hover.color);
+--ticker-border:$(ticker.border.color);
+--widget-bg:$(widget.bg);
+--footerad-bg:$(footerad.bg);
+--footerad-border:$(footerad.border.color);
+--footer-bg:$(footer.bg);
+--footer-color:$(footer.color);
+--footer-text-color:$(footer.text.color);
+--footerbar-bg:$(footerbar.bg);
+--footerbar-color:$(footerbar.color);
+--footerbar-hover-color:$(footerbar.hover.color);
+--footerbar-border-color:$(footerbar.border.color);
+--cookie-bg:$(cookie.bg);
+--cookie-color:$(cookie.color);
+--button-bg:linear-gradient(135deg,$(btn.left) 0%,$(btn.center) 50%,$(btn.right) 100%);
+--button-color:$(btn.color);
+--button-border:$(btn.center);
+--light-weight:400;
+--title-weight:700;
+--gray-bg:rgba(155,155,155,0.05);
+--border-color:$(border.color);
+--radius:5px;
+--widget-shadow: 0 1px 2px rgba(0,0,0,0.05);
+--avatar-shadow:0px 1px 4px rgba(0,0,0,0.05);
 }
-
-/* --- DARK MODE VARIABLES --- */
 html.is-dark{
-    --body-bg-color:$(dark.bg);
-    --body-bg:$(body.background);
-    --outer-bg:$(dark1.bg);
-    --main-color:$(dark.main.color);
-    --title-color:$(dark.title);
-    --title-hover-color:$(dark.main.color);
-    --text-color:$(dark.text);
-    --meta-color:$(dark.meta);
-    --meta-link-color:$(dark.meta.link);
-    --topad-bg:$(dark1.bg);
-    --topad-border:transparent;
-    --header-bg:$(dark2.bg);
-    --header-color:$(dark.title);
-    --header-hover-color:$(dark.main.color);
-    --submenu-bg:$(dark3.bg);
-    --submenu-color:$(dark.title);
-    --submenu-hover-color:$(dark.main.color);
-    --mega-bg:$(dark3.bg);
-    --mega-color:$(dark.title);
-    --mega-hover-color:$(dark.main.color);
-    --mega-meta-color:$(dark.meta);
-    --mobilemenu-bg:$(dark1.bg);
-    --mobilemenu-color:$(dark.title);
-    --mobilemenu-hover-color:$(dark.main.color);
-
-    /* [TICKER REMOVED IN DARK MODE] */
-
-    --widget-bg:$(dark2.bg);
-    --footerad-bg:$(dark2.bg);
-    --footerad-border:$(dark.border);
-    --footer-bg:$(dark2.bg);
-    --footer-color:$(dark.title);
-    --footer-text-color:$(dark.text);
-    --footerbar-bg:$(dark1.bg);
-    --footerbar-color:$(dark.title);
-    --footerbar-hover-color:$(dark.main.color);
-    --footerbar-border-color:transparent;
-    --cookie-bg:$(dark2.bg);
-    --cookie-color:$(dark.text);
-    --gray-bg:rgba(255,255,255,0.03);
-    --border-color:$(dark.border);
+--body-bg-color:$(dark.bg);
+--body-bg:$(body.background);
+--outer-bg:$(dark1.bg);
+--main-color:$(dark.main.color);
+--title-color:$(dark.title);
+--title-hover-color:$(dark.main.color);
+--text-color:$(dark.text);
+--meta-color:$(dark.meta);
+--meta-link-color:$(dark.meta.link);
+--topad-bg:$(dark1.bg);
+--topad-border:transparent;
+--header-bg:$(dark2.bg);
+--header-color:$(dark.title);
+--header-hover-color:$(dark.main.color);
+--submenu-bg:$(dark3.bg);
+--submenu-color:$(dark.title);
+--submenu-hover-color:$(dark.main.color);
+--mega-bg:$(dark3.bg);
+--mega-color:$(dark.title);
+--mega-hover-color:$(dark.main.color);
+--mega-meta-color:$(dark.meta);
+--mobilemenu-bg:$(dark1.bg);
+--mobilemenu-color:$(dark.title);
+--mobilemenu-hover-color:$(dark.main.color);
+--ticker-bg:$(dark2.bg);
+--ticker-icon:$(dark.main.color);
+--ticker-title:$(dark.title);
+--ticker-color:$(dark.text);
+--ticker-hover-color:$(dark.main.color);
+--ticker-border:$(dark.border);
+--widget-bg:$(dark2.bg);
+--footerad-bg:$(dark2.bg);
+--footerad-border:$(dark.border);
+--footer-bg:$(dark2.bg);
+--footer-color:$(dark.title);
+--footer-text-color:$(dark.text);
+--footerbar-bg:$(dark1.bg);
+--footerbar-color:$(dark.title);
+--footerbar-hover-color:$(dark.main.color);
+--footerbar-border-color:transparent;
+--cookie-bg:$(dark2.bg);
+--cookie-color:$(dark.text);
+--gray-bg:rgba(255,255,255,0.03);
+--border-color:$(dark.border);
 }
-/* [RTL BLOCK REMOVED] - বাংলা/ইংরেজির জন্য এটি অপ্রয়োজনীয় */
-
+html.rtl{
+--body-font:'Cairo',Arial,sans-serif;
+--menu-font:'Cairo',Arial,sans-serif;
+--title-font:'Cairo',Arial,sans-serif;
+--text-font:'Cairo',Arial,sans-serif;
+}
 
 /*-- Reset CSS --*/
 html,body,a,abbr,acronym,address,applet,b,big,blockquote,caption,center,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,font,form,input,button,h1,h2,h3,h4,h5,h6,i,iframe,img,ins,kbd,label,legend,li,object,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,u,ul,var{padding:0;margin:0;border:0;outline:none;vertical-align:baseline;background:0 0;text-decoration:none}dl,ul{list-style-position:inside;list-style:none}ul li{list-style:none}caption{text-align:center}img{border:none;position:relative}a,a:visited{text-decoration:none}.clearfix{clear:both}.section,.widget,.widget ul{margin:0;padding:0}a{color:var(--main-color)}a img{border:0}abbr{text-decoration:none}.separator a{text-decoration:none!important;clear:none!important;float:none!important;margin-left:0!important;margin-right:0!important}#Navbar1,#navbar-iframe,.widget-item-control,a.quickedit,.home-link,.feed-links{display:none!important}.center{display:table;margin:0 auto;position:relative}.widget > h2,.widget > h3{display:none}.widget iframe,.widget img{max-width:100%}button,input,select,textarea{background:transparent;font-family:var(--body-font);-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:none;border-radius:0}button{cursor:pointer}input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}
@@ -599,7 +607,35 @@ a,input,textarea,button{transition:all .0s ease}
 .mm-footer .rss a,.mm-footer .email a,.mm-footer .external-link a{font-size:18px}
 .mm-footer .social a:hover{opacity:.9}
 .mm-footer .link-list a:hover{color:var(--mobilemenu-hover-color)}
-
+#ticker-wrapper{position:relative;float:left;width:100%;background-color:var(--ticker-bg);box-shadow:var(--widget-shadow)}
+#ticker-wrapper.has-border,.is-dark #ticker-wrapper{border-top:1px solid var(--ticker-border)}
+#ticker .widget{display:none;align-items:center;height:34px;margin:0}
+#ticker .widget.is-visible,#ticker .widget.PopularPosts{display:flex}
+.ticker .widget-title{display:flex;align-items:center;position:relative;margin:0 6px 0 0}
+.rtl .ticker .widget-title{margin:0 0 0 6px}
+.ticker .widget-title:before{display:inherit;content:'\e932';font-family:'Material Icons Round';font-size:15px;color:var(--ticker-icon);font-weight:400;line-height:1}
+.ticker .widget-title .title{display:flex;align-items:center;font-size:15px;color:var(--ticker-title);font-weight:700;margin:0 0 0 3px}
+.rtl .ticker .widget-title .title{margin:0 3px 0 0}
+.ticker .widget-title .title:after{display:inline-block;content:'\e5cc';font-family:'Material Icons Round';font-weight:400;font-size:16px;line-height:1;margin:1px -2px 0}
+.rtl .ticker .widget-title .title:after{content:'\e5cb'}
+.ticker .widget-content{display:flex;justify-content:space-between;flex:1}
+.ticker .loader{justify-content:flex-start;padding:0 1px}
+.ticker .loader:after{width:14px;height:14px;border-width:1.5px}
+.ticker .error-msg{max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;padding:0}
+.ticker-items{position:relative;flex:1;overflow:hidden}
+.ticker-items .post{position:absolute;top:0;left:0;width:100%;opacity:0;visibility:hidden;transform:translate3d(5px,0,0);pointer-events:none;transition:all .85s ease}
+.rtl .ticker-items .post{left:unset;right:0;transform:translate3d(-10px,0,0)}
+.ticker-items .post.active{opacity:1;visibility:visible;transform:translate3d(0,0,0);pointer-events:initial}
+.ticker-items .entry-title{display:flex;align-items:center;height:20px;font-size:14px;font-weight:400}
+.ticker-items .entry-title a{max-width:100%;overflow:hidden;color:var(--ticker-color);white-space:nowrap;text-overflow:ellipsis}
+.ticker-items .entry-title a:hover{color:var(--ticker-hover-color)}
+.ticker-nav{display:grid;grid-template-columns:repeat(2,1fr);grid-gap:5px;padding:0 0 0 10px}
+.rtl .ticker-nav{padding:0 10px 0 0}
+.ticker-nav button{display:flex;width:20px;height:20px;background-color:var(--gray-bg);font-size:18px;color:var(--ticker-title);align-items:center;justify-content:center}
+.ticker-nav button:hover{color:var(--ticker-hover-color)}
+.ticker-nav button:before{display:block;font-family:'Material Icons Round'}
+.ticker-nav .tn-prev:before,.rtl .ticker-nav .tn-next:before{content:'\e5cb'}
+.ticker-nav .tn-next:before,.rtl .ticker-nav .tn-prev:before{content:'\e5cc'}
 #trending-wrapper,#trending .widget,#trending .widget-content{float:left;width:100%;margin:0}
 #trending .widget{display:none;margin:25px 0 0}
 #trending .widget.is-visible,#trending .widget.PopularPosts{display:block}
@@ -746,7 +782,7 @@ table.tr-caption-container td.tr-caption{font-size:12px;color:var(--meta-color);
 .pbt-toc-title-text:before{content:'\e242';font-family:'Material Icons Round';font-size:20px;font-weight:400;margin:0 6px 0 0}
 .rtl .pbt-toc-title-text:before{margin:0 0 0 6px}
 .pbt-toc-title:after{content:'\e5cf';font-family:'Material Icons Round';font-size:24px;font-weight:400;margin:0 0 0 20px}
-
+.rtl .pbt-toc-title:after{margin:0 20px 0 0}
 .pbt-toc-title.is-expanded:after{content:'\e5ce'}
 #pbt-toc{display:none;padding:0 20px 10px;margin:0}
 #pbt-toc ol{counter-reset:pbtToc;padding:0 0 0 20px}
@@ -796,6 +832,7 @@ ul.share-a{display:flex;flex-wrap:wrap;align-items:flex-start}
 .rtl .modal-thumb{margin:0 0 0 12px}
 .modal-title{display:-webkit-box;flex:1;width:100%;font-size:15px;color:var(--title-color);line-height:1.3em;overflow:hidden;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .modal-title .strong{font-weight:700;margin:0 6px 0 0}
+.rtl .modal-title .strong{margin:0 0 0 6px}
 .modal-title .title{opacity:.8}
 ul.share-b{display:grid;grid-template-columns:repeat(3,1fr);grid-gap:10px;position:relative;padding:20px}
 .share-b a{display:flex;align-items:center;justify-content:flex-start;height:34px;font-size:14px;color:#fff;padding:4px}
@@ -936,7 +973,7 @@ p.comments-message > em{color:#ff3f34;font-style:normal;margin:0 3px}
 .side-items .post{display:flex;flex-direction:column}
 .side-items .entry-thumbnail{width:100%;height:90px;margin:0 0 10px}
 .side-items .entry-index{display:flex;align-items:center;justify-content:center;position:absolute;left:12px;bottom:12px;width:18px;height:18px;background:var(--thumbtag-bg);font-size:10px;color:var(--thumbtag-color);font-weight:500;text-transform:uppercase;line-height:0;z-index:2;border-radius:var(--radius)}
-
+.rtl .side-items .entry-index{left:unset;right:12px}
 .side-items .entry-title{font-size:14px}
 .cmm1-items{display:grid;grid-template-columns:1fr;grid-gap:25px}
 .cmm1-items .entry-inner{display:flex;align-items:center}
@@ -1007,7 +1044,7 @@ p.comments-message > em{color:#ff3f34;font-style:normal;margin:0 3px}
 .rtl .Stats .text-counter-wrapper:before{margin:0 0 0 4px}
 .ReportAbuse > h3{display:flex;font-size:14px;font-weight:400}
 .ReportAbuse > h3:before{content:'\e002';font-family:'Material Icons Round';font-size:18px;color:var(--main-color);margin:0 3px 0 0}
-
+.rtl .ReportAbuse > h3:before{margin:0 0 0 3px}
 .ReportAbuse > h3 a:hover{text-decoration:underline}
 #footer-ads-wrap{position:relative;float:left;width:100%;background-color:var(--footerad-bg);margin:0;box-shadow:var(--widget-shadow)}
 #footer-ads-wrap .widget{padding:20px 0}
@@ -1169,7 +1206,8 @@ ins.adsbygoogle-noablate[data-anchor-shown="true"]{z-index:990!important}
 .cookie-consent{right:0!important;left:0!important;bottom:0;width:100%;padding:20px;border-radius:0}
 }
 @media only screen and (max-width: 540px) {
-
+.ticker .widget-title .title{display:none}
+.ticker-items .entry-title a{opacity:1}
 .trending-items{grid-gap:15px}
 .trending-items .entry-thumbnail{height:130px}
 .trending-items .entry-category{left:15px;bottom:15px}
@@ -1535,7 +1573,7 @@ h1.entry-title, .post-body h1 {
     display: inline-block;
 }
 
-/* --- মোবাইল ভার্সন  --- */
+/* --- মোবাইল ভার্সন (Prothom Alo Mobile Style) --- */
 @media only screen and (max-width: 768px) {
     /* মোবাইলে শিরোনাম */
     .item-post h1.entry-title {
@@ -1705,455 +1743,6 @@ h1.entry-title, .post-body h1 {
         border: 1px solid rgba(0,0,0,0.05) !important;
     }
 }
-
-
-
-
-
-
-
-
-
-/* --- New Header Layout (Logo Left | Icons Right) --- */
-
-/* ১. মোবাইল হেডার কন্টেইনার */
-@media only screen and (max-width: 980px) {
-    .header-items {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        padding: 0 15px !important; /* হেডারের দুই পাশে ১৫ পিক্সেল গ্যাপ */
-        height: 70px !important;    /* হেডারের উচ্চতা একটু বাড়ানো হলো লোগোর জন্য */
-    }
-
-    /* ২. বাম পাশ (লোগো) */
-    .flex-left {
-        flex: 1; /* যতটুকু জায়গা দরকার নেবে */
-        display: flex;
-        justify-content: flex-start; /* লোগো একদম বামে */
-    }
-
-    .main-logo {
-        margin: 0 !important;
-        max-width: 180px !important; /* লোগো এরিয়া চওড়া করা হলো */
-    }
-
-    .main-logo img {
-        max-height: 50px !important; /* লোগো এখন অনেক বড় দেখাবে */
-        width: auto !important;
-    }
-
-    /* ৩. ডান পাশ (আইকনস গ্রুপ) */
-    .flex-right {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: flex-end !important;
-        position: static !important; /* পজিশন ফিক্সড ইস্যু সলভ */
-        height: auto !important;
-    }
-    
-    .toggle-wrap {
-        display: flex !important;
-        align-items: center !important;
-    }
-}
-
-/* --- ৪. ল্যাঙ্গুয়েজ বাটন কন্ট্রোলার (Senior Dev Logic) --- */
-/* এই সেকশন থেকেই আপনি বাটনটি কন্ট্রোল করবেন */
-
-.lang-switcher-group {
-    /* অবস্থান কন্ট্রোল (Position) */
-    margin-right: 10px !important; /* মেনু আইকন থেকে কতটুকু বামে থাকবে (গ্যাপ বাড়াতে মান বাড়ান) */
-    
-    /* সাইজ কন্ট্রোল (Size) - পুরো বাটন এক সাথে ছোট বড় হবে */
-    transform: scale(0.9); /* ১ মানে আসল সাইজ। ০.৯ দিলে ছোট হবে, ১.১ দিলে বড় হবে */
-    transform-origin: right center; /* ডান দিক ফিক্সড রেখে ছোট বড় হবে */
-}
-
-/* ল্যাঙ্গুয়েজ বাটন ডিজাইন (ফিক্সড) */
-.lang-switcher {
-    display: flex;
-    align-items: center;
-    border: 1px solid #fff;
-    height: 29px; 
-    box-sizing: border-box;
-}
-
-.lang-switcher .lang-opt {
-    padding: 0 10px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-    font-size: 13px;
-    text-decoration: none;
-    line-height: 1;
-}
-
-/* বাংলা (সাদা) */
-.lang-switcher .lang-opt.active {
-    background-color: #ffffff;
-    color: #052962;
-    font-family: 'Noto Serif Bengali', serif;
-}
-
-/* ইংলিশ (ট্রান্সপারেন্ট) */
-.lang-switcher .lang-opt.link {
-    background-color: transparent;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-}
-
-/* --- ৫. আইকন ডিজাইন (মেনু ও সার্চ) --- */
-
-/* মেনু আইকন (৩ দাগ) */
-.mobile-menu-toggle {
-    display: flex !important; /* বাটনটি ভিজিবল করা হলো */
-    font-size: 36.5px !important; /* আইকন সাইজ */
-    color: #ffffff !important;
-    padding: 0 !important;
-    margin-right: 3.5px !important; /* সার্চ আইকন থেকে দূরত্ব */
-    width: auto !important;
-    cursor: pointer;
-}
-
-/* সার্চ আইকন */
-.search-toggle {
-    font-size: 27px !important;
-    color: #ffffff !important;
-    padding: 0 !important;
-    width: auto !important;
-}
-
-/* আইকনগুলো যাতে ফিক্সড হেডারে সবসময় সাদা থাকে */
-.header-inner.is-fixed .mobile-menu-toggle,
-.header-inner.is-fixed .search-toggle {
-    color: #fff !important;
-}
-
-
-
-
-
-
-
-
-
-
-/* --- Remove Extra Top Space on Mobile Header --- */
-@media only screen and (max-width: 980px) {
-    
-    /* ১. উপরের প্যাডিং ও মার্জিন একদম জিরো করে দেওয়া */
-    .header-inner, 
-    .main-header, 
-    .header-header {
-        padding-top: 0px !important;
-        margin-top: 0px !important;
-        top: 0 !important;
-    }
-
-    /* ২. হেডারের উচ্চতা সামান্য কমানো (টাইট রাখার জন্য) */
-    .header-items {
-        height: 60px !important; /* আগে 70px ছিল, এখন 60px করলাম */
-        min-height: 60px !important;
-        align-items: center !important; /* লম্বালম্বি মাঝখানে থাকবে */
-    }
-
-    /* ৩. লোগো এবং আইকনের পজিশন ঠিক রাখা */
-    .main-logo img {
-        max-height: 40px !important; /* লোগোর সাইজ ঠিক রাখা */
-        margin-top: 0px !important;
-    }
-}
-
-/* ==========================================================================
-   FINAL PROTHOM ALO STYLE FIXES (Gap, Buttons, Mobile Body, Footer)
-   ========================================================================== */
-
-/* --- 1. HEADER & HERO GAP REMOVAL (একদম জোড়া লাগানো) --- */
-@media only screen and (min-width: 981px) {
-    /* হেডার শ্যাডো এবং বর্ডার রিমুভ */
-    .header-inner {
-        box-shadow: none !important; 
-        border-bottom: 1px solid rgba(0,0,0,0.05) !important; /* খুব হালকা সেপারেটর */
-    }
-    
-    /* হেডারের নিচের মার্জিন জিরো */
-    .main-header, #header-wrapper {
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
-    }
-
-    /* হিরো বা স্লাইডারের উপরের মার্জিন জিরো */
-    #intro-wrapper, .trending-wrapper, #main-wrapper {
-        margin-top: 0 !important;
-        padding-top: 20px !important; /* কন্টেন্টের জন্য সামান্য স্পেস */
-    }
-    
-    /* বডি প্যাডিং ফিক্স (হেডারের সাথে মিল রেখে) */
-    body {
-        padding-top: 70px !important; 
-    }
-}
-
-/* --- 2. BUTTONS ALIGNMENT (আরও পড়ুন / সবগুলো পড়ুন) --- */
-/* টাইটেল এবং বাটনগুলো একদম কোণায় না লেগে একটু ভেতরে থাকবে */
-.section-title, .title-wrap, .widget-title {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-bottom: 15px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-}
-
-/* বাটনের ডিজাইন এবং পজিশন */
-.view-all, .button-more, .show-more {
-    margin-right: 5px !important; /* ডান পাশ থেকে একটু সরিয়ে আনা */
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    background: #f4f4f4 !important; /* হালকা ব্যাকগ্রাউন্ড */
-    padding: 5px 12px !important;
-    border-radius: 4px !important;
-    color: #052962 !important;
-}
-
-/* মোবাইলে বাটনগুলো আরেকটু সেইফ জোনে রাখা */
-@media only screen and (max-width: 980px) {
-    .section-title, .title-wrap {
-        padding: 0 10px !important; /* মোবাইলে ১০ পিক্সেল গ্যাপ */
-    }
-}
-
-
-/* --- 3. MOBILE POST BODY (Prothom Alo Style) --- */
-@media only screen and (max-width: 980px) {
-    
-    /* পোস্ট কন্টেইনার ১০০% */
-    .item-view .post-body {
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 0 16px !important; /* প্রথম আলোর মতো দুই পাশে ১৬ পিক্সেল প্যাডিং */
-        box-sizing: border-box !important;
-        
-        /* ফন্ট স্টাইল */
-        text-align: left !important;
-        font-size: 19px !important;
-        line-height: 1.6em !important;
-        color: #111 !important;
-    }
-
-    /* পোস্টের ছবি ফুল উইডথ */
-    .post-body img, .post-body .separator img {
-        width: calc(100% + 32px) !important; /* প্যাডিং কভার করে ফুল স্ক্রিন */
-        margin-left: -16px !important; /* বামে টেনে আনা */
-        margin-right: -16px !important;
-        max-width: none !important;
-        border-radius: 0 !important; /* মোবাইলে শার্প এজ */
-        height: auto !important;
-        margin-top: 15px !important;
-        margin-bottom: 15px !important;
-    }
-
-    /* ভিডিও ফুল উইডথ */
-    .post-body iframe {
-        width: calc(100% + 32px) !important;
-        margin-left: -16px !important;
-    }
-}
-
-
-/* --- 4. MOBILE FOOTER CENTER ALIGNMENT --- */
-@media only screen and (max-width: 980px) {
-    
-    /* ফুটার এরিয়া */
-    #footer-wrapper, .footer-wrapper {
-        text-align: center !important; /* সব লেখা মাঝখানে */
-        padding: 20px 20px !important;
-    }
-
-    /* ফুটার লোগো বা ছবি মাঝখানে আনা */
-    #footer-wrapper img, .footer-widget img {
-        margin: 0 auto 20px auto !important;
-        display: block !important;
-        max-width: 300px !important;
-    }
-
-    /* লেখা বা ডেসক্রিপশন */
-    .footer-info, .widget-content, .footer-widget p {
-        text-align: center !important;
-        margin-bottom: 20px !important;
-        line-height: 1.6 !important;
-        color: rgba(255,255,255,0.8) !important; /* হালকা সাদা */
-    }
-
-    /* ফুটার মেনু লিংকগুলো মাঝখানে */
-    .footer-menu ul, .social-icons {
-        justify-content: center !important;
-        display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 10px !important;
-    }
-    
-    /* কপিরাইট অংশ */
-    .copyright-area {
-        text-align: center !important;
-        margin-top: 20px !important;
-        border-top: 1px solid rgba(255,255,255,0.1) !important;
-        padding-top: 10px !important;
-    }
-}
-
-
-/* --- SENIOR DEV FIX: Desktop Header Cleanup --- */
-/* এই কোড শুধুমাত্র ৯৮১ পিক্সেলের উপরের স্ক্রিনে (ডেস্কটপ/ল্যাপটপ) কাজ করবে */
-@media only screen and (min-width: 981px) {
-
-    /* ১. ডেস্কটপ হেডারের উপরের অনাকাঙ্খিত স্পেস রিমুভ */
-    body {
-        padding-top: 0 !important; /* আগের 70px প্যাডিং ওভাররাইড করে 0 করা হলো */
-    }
-    
-    #outer-wrapper {
-        margin-top: 0 !important;
-    }
-
-    /* ২. ডেস্কটপে হ্যামবার্গার মেনু হাইড করা */
-    .mobile-menu-toggle {
-        display: none !important; /* এটি ডেস্কটপে মেনু আইকন জোর করে বন্ধ রাখবে */
-    }
-
-    /* ৩. সার্চ বাটন এবং ল্যাঙ্গুয়েজ সুইচার যাতে ঠিকঠাক থাকে */
-    .toggle-wrap {
-        display: flex !important;
-        align-items: center !important;
-    }
-}
-
-/* --- MODERN FULL SCREEN OVERLAY SEARCH (By Senior Dev) --- */
-
-/* ১. সার্চ র‍্যাপার (পুরো স্ক্রিন জুড়বে) */
-#main-search-wrap {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100vh !important; /* পুরো হাইট */
-    background-color: rgba(5, 41, 98, 0.98) !important; /* আপনার ব্র্যান্ড কালার (ডিপ ব্লু) */
-    z-index: 999999 !important; /* সবার উপরে থাকবে */
-    padding: 0 !important;
-    display: none; /* ডিফল্টভাবে লুকানো */
-    
-    /* কন্টেন্ট মাঝখানে আনার জন্য */
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(5px); /* ব্যাকগ্রাউন্ড হালকা ঝাপসা হবে */
-}
-
-/* যখন সার্চ বাটন ক্লিক করা হবে (JS ক্লাস 'search-active' যোগ করে) */
-body.search-active #main-search-wrap {
-    display: flex !important; /* JS এর 'block' কে ওভাররাইড করে 'flex' করা হলো */
-}
-
-/* ২. সার্চ ফর্ম কন্টেইনার */
-.main-search {
-    width: 80% !important;
-    max-width: 800px !important;
-    float: none !important;
-    margin: 0 auto !important;
-    height: auto !important;
-    animation: searchUp 0.4s ease forwards !important; /* এনিমেশন */
-}
-
-/* ৩. ইনপুট ফিল্ড ডিজাইন */
-.main-search .search-form {
-    border-bottom: 2px solid rgba(255,255,255,0.3) !important;
-    height: auto !important;
-    background: transparent !important;
-    border-radius: 0 !important;
-}
-
-.main-search .search-input {
-    background: transparent !important;
-    color: #ffffff !important;
-    font-family: 'Noto Serif Bengali', serif !important;
-    font-size: 32px !important; /* বড় ফন্ট */
-    font-weight: 700 !important;
-    text-align: center !important;
-    height: 80px !important;
-    padding: 0 !important;
-    width: 100% !important;
-    border: none !important;
-    outline: none !important;
-}
-
-.main-search .search-input::placeholder {
-    color: rgba(255,255,255,0.5) !important;
-    font-weight: 400 !important;
-    font-size: 28px !important;
-}
-
-/* ৪. ক্লোজ বাটন (X) ডিজাইন - ডান দিকের কোণায় */
-.main-search .search-close {
-    position: absolute !important;
-    top: 40px !important;
-    right: 40px !important;
-    width: 50px !important;
-    height: 50px !important;
-    font-size: 0 !important; /* ডিফল্ট আইকন টেক্সট হাইড */
-    background: transparent !important;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-/* নতুন ক্লোজ আইকন (Material Icon) */
-.main-search .search-close::before {
-    content: '\e5cd' !important; /* Close icon code */
-    font-family: 'Material Icons Round' !important;
-    font-size: 45px !important;
-    color: #fff !important;
-    display: block !important;
-    line-height: 50px !important;
-}
-
-.main-search .search-close:hover {
-    transform: rotate(90deg); /* হোভার করলে ঘুরবে */
-    opacity: 1;
-}
-
-/* ৫. মোবাইল অপ্টিমাইজেশন */
-@media only screen and (max-width: 768px) {
-    .main-search .search-input {
-        font-size: 24px !important; /* মোবাইলে ফন্ট একটু ছোট */
-        height: 60px !important;
-    }
-    .main-search .search-input::placeholder {
-        font-size: 20px !important;
-    }
-    .main-search .search-close {
-        top: 20px !important;
-        right: 20px !important;
-    }
-    .main-search .search-close::before {
-        font-size: 35px !important;
-    }
-}
-
-/* ৬. এন্ট্রান্স অ্যানিমেশন */
-@keyframes searchUp {
-    from { 
-        opacity: 0; 
-        transform: translateY(30px) scale(0.95); 
-    }
-    to { 
-        opacity: 1; 
-        transform: translateY(0) scale(1); 
-    }
-}
-
-
-
 ]]></b:skin>
 </b:if>
 <b:if cond='data:view.isLayoutMode'>
@@ -3336,19 +2925,17 @@ body#layout #hidden-widgets{display:none!important}
       <b:section class='top-ads container row-x1' id='top-ads' maxwidgets='1' name='Top ADS' showaddelement='yes'/>
     </div>
   </b:if>
-
-<header id='header-wrapper'>
+  <header id='header-wrapper'>
     <div class='main-header'>
       <div class='header-inner'>
         <div class='header-header flex-c'>
           <div class='container row-x1'>
-            
             <div class='header-items'>
-              
               <div class='flex-left'>
+                <b:tag aria-label='Show Menu' class='mobile-menu-toggle' name='button'/>
                 <b:if cond='data:view.isLayoutMode or (data:widgets.Image any w =&gt; w.sectionId == &quot;main-logo&quot;)'>
                   <b:section class='main-logo' id='main-logo' maxwidgets='1' name='Header Logo' showaddelement='no'>
-                    <b:widget id='Image50' locked='true' title='' type='Image' version='2' visible='true'>
+                    <b:widget id='Image50' locked='true' title='' type='Image' visible='true'>
                       <b:widget-settings>
                         <b:widget-setting name='displayUrl'>https://blogger.googleusercontent.com/img/a/AVvXsEg7nxEmWodX9ZkOECNnS7CsRnFgLp7wZP61fMUy3zWMPLN8v1OYM0pV3YD_ljaM6Jg7n7fdPqj1miOZ0l2yDmQdV7qKs5IWOUx2jW-2cby7KLljaiYtRNx70ozHUUH_jXHVZqKQvzzZZMa72Gj8G_1j14tBHYwIrVG_bzMnT7I9hi9DuLXrDyEEbE49TF2-=s1600</b:widget-setting>
                         <b:widget-setting name='displayHeight'>500</b:widget-setting>
@@ -3359,12 +2946,12 @@ body#layout #hidden-widgets{display:none!important}
                         <b:widget-setting name='caption'/>
                       </b:widget-settings>
                       <b:includable id='main' var='this'>
-                          <b:include name='widget-title'/>
-                          <b:include name='content'/>
-                        </b:includable>
+      <b:include name='widget-title'/>
+      <b:include name='content'/>
+    </b:includable>
                       <b:includable id='content'>
-                          <b:include name='image-content'/>
-                        </b:includable>
+      <b:include name='image-content'/>
+    </b:includable>
                     </b:widget>
                   </b:section>
                 <b:else/>
@@ -3374,63 +2961,31 @@ body#layout #hidden-widgets{display:none!important}
                     </b:tag>
                   </div>
                 </b:if>
-
-                <b:section class='main-menu-section' id='main-menu-section' maxwidgets='1' name='Main Menu' showaddelement='yes'>
-                  <b:widget id='LinkList155' locked='false' title='Main Menu' type='LinkList' version='2' visible='true'>
+                <b:section class='buzzspot-pro-main-menu' id='buzzspot-pro-main-menu' maxwidgets='1' name='Header Menu' showaddelement='no'>
+                  <b:widget id='LinkList200' locked='true' title='' type='LinkList' visible='true'>
                     <b:widget-settings>
-                      <b:widget-setting name='text-8'>সপ&#2509;ত&#2494;হজ&#2497;ড়&#2503; ব&#2503;ঙ&#2509;গলড&#2503;স&#2509;ক </b:widget-setting>
-                      <b:widget-setting name='link-7'>https://www.bengaldesk.com/search/label/কল&#2494;ম</b:widget-setting>
-                      <b:widget-setting name='link-8'>https://www.bengaldesk.com/search/label/সপ&#2509;ত&#2494;হজ&#2497;ড়&#2503;</b:widget-setting>
-                      <b:widget-setting name='link-5'>https://www.bengaldesk.com/search/label/খ&#2503;ল&#2494;ধ&#2498;ল&#2494;</b:widget-setting>
-                      <b:widget-setting name='link-6'>https://www.bengaldesk.com/search/label/প&#2509;রয&#2497;ক&#2509;ত&#2495;</b:widget-setting>
-                      <b:widget-setting name='link-3'>https://www.bengaldesk.com/search/label/র&#2494;জন&#2496;ত&#2495;</b:widget-setting>
-                      <b:widget-setting name='link-4'>https://www.bengaldesk.com/search/label/ফ&#2509;য&#2494;ক&#2509;টচ&#2503;ক</b:widget-setting>
-                      <b:widget-setting name='text-1'>জ&#2494;ত&#2496;য়</b:widget-setting>
-                      <b:widget-setting name='text-0'>ন&#2496;ড়</b:widget-setting>
-                      <b:widget-setting name='text-3'>র&#2494;জন&#2496;ত&#2495;</b:widget-setting>
-                      <b:widget-setting name='text-2'>আন&#2509;তর&#2509;জ&#2494;ত&#2495;ক</b:widget-setting>
-                      <b:widget-setting name='text-5'>খ&#2503;ল&#2494;ধ&#2497;ল&#2494;</b:widget-setting>
-                      <b:widget-setting name='text-4'>ফ&#2509;য&#2494;ক&#2509;টচ&#2503;ক</b:widget-setting>
-                      <b:widget-setting name='text-7'>কল&#2494;ম</b:widget-setting>
-                      <b:widget-setting name='text-6'>প&#2509;রয&#2497;ক&#2509;ত&#2495;</b:widget-setting>
                       <b:widget-setting name='sorting'>NONE</b:widget-setting>
-                      <b:widget-setting name='link-1'>https://www.bengaldesk.com/search/label/জ&#2494;ত&#2496;য়</b:widget-setting>
-                      <b:widget-setting name='link-2'>https://www.bengaldesk.com/search/label/আন&#2509;তর&#2509;জ&#2494;ত&#2495;ক</b:widget-setting>
-                      <b:widget-setting name='link-0'>bengaldesk.com</b:widget-setting>
+                      <b:widget-setting name='text-1'>Bengaldesk English</b:widget-setting>
+                      <b:widget-setting name='link-1'>https://en.bengaldesk.com</b:widget-setting>
+                      <b:widget-setting name='text-0'>ন&#2496;ড় &#2404; Home</b:widget-setting>
+                      <b:widget-setting name='link-0'>https://bengaldesk.com</b:widget-setting>
                     </b:widget-settings>
-                    <b:includable id='main'>
-                      <div class='widget-content'>
-                        <ul class='main-nav' id='buzzspot-pro-main-menu'>
-                          <b:loop values='data:links' var='link'>
-                            <li><a expr:href='data:link.target'><data:link.name/></a></li>
-                          </b:loop>
-                        </ul>
-                      </div>
-                    </b:includable>
+                    <b:includable id='main' var='this'>
+      <b:include name='widget-title'/>
+      <b:include name='content'/>
+    </b:includable>
                     <b:includable id='content'>
       <b:include name='linklist-content'/>
     </b:includable>
                   </b:widget>
                 </b:section>
-                </div>
-
+              </div>
               <div class='flex-right'>
                 <div class='toggle-wrap'>
-                  
-                  <div class='lang-switcher-group'>
-                      <div class='lang-switcher'>
-                        <span class='lang-opt active'>ব&#2494;&#2434;ল&#2494;</span>
-                        <a class='lang-opt link' href='https://en.bengaldesk.com'>ENGLISH</a>
-                      </div>
-                  </div>
-
-                  <b:tag aria-label='Show Menu' class='mobile-menu-toggle' name='button'/>
-
+                  <b:tag aria-label='Dark Mode' class='darkmode-toggle' cond='data:skin.vars.darkmode == &quot;0px&quot; and (data:skin.vars.userdarkmode == &quot;1px&quot;)' name='button'/>
                   <b:tag class='search-toggle show-search btn' expr:aria-label='data:messages.search' name='button'/>
-                  
                 </div>
               </div>
-              
               <div id='main-search-wrap'>
                 <div class='main-search'>
                   <form class='search-form' expr:action='data:blog.searchUrl'>
@@ -3440,13 +2995,11 @@ body#layout #hidden-widgets{display:none!important}
                   </form>
                 </div>
               </div>
-
-            </div> 
+            </div>
           </div>
         </div>
       </div>
     </div>
-    
     <b:if cond='data:view.isLayoutMode or (data:view.isHomepage or (data:view.isPost and (data:skin.vars.ticker_onpost == &quot;1px&quot;))) and (data:widgets any w =&gt; w.sectionId == &quot;ticker&quot;)'>
       <div class='flex-c' id='ticker-wrapper'>
         <b:class cond='data:skin.vars.ticker_border == &quot;1px&quot;' name='has-border'/>
@@ -4136,7 +3689,7 @@ body#layout #hidden-widgets{display:none!important}
       </main>
       <aside id='sidebar-wrapper'>
         <b:section class='sidebar pbt-section' cond='!data:view.isError' id='sidebar' name='Sidebar' showaddelement='yes'>
-          <b:widget id='LinkList1' locked='false' title='সোস্যাল মিডিয়ায় আমরা' type='LinkList' visible='false'>
+          <b:widget id='LinkList1' locked='false' title='সোস্যাল মিডিয়ায় আমরা' type='LinkList' visible='true'>
             <b:widget-settings>
               <b:widget-setting name='link-3'>https://www.youtube.com/@thebengaldesk?sub_confirmation=1 # 65k</b:widget-setting>
               <b:widget-setting name='sorting'>NONE</b:widget-setting>
@@ -4406,9 +3959,6 @@ if (uri.indexOf("?m=1", "?m=1") > 0) {
 }
 //]]>
 </script>
- 
   
-  
-
 </body>
 </html>
